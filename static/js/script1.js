@@ -15,6 +15,8 @@ $(document).ready(()=>{
     $(".submit").on("click",(e)=>{
         e.preventDefault();
         let method = $("select option:selected").text();
+        if(method==="Choose your option")
+            method = "GET";
         let url = $("#url").val();
         let body = $("#data").val();
         
