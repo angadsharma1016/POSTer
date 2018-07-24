@@ -13,9 +13,9 @@
     <div class="nav-wrapper">
       <a href="#" class="brand-logo">Logo</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">JavaScript</a></li>
+        <li><a href="http://localhost/">localhost</a></li>
+        <li><a href="http://localhost:3000/">localhost:3000</a></li>
+        <li><a href="http://localhost:5000/">localhost:5000</a></li>
       </ul>
     </div>
   </nav>
@@ -27,19 +27,89 @@
                     <div class="col s12 m12">
                       <div class="card blue-grey darken-1">
                         <div class="card-content white-text">
-                          <span class="card-title">Card Title</span>
-                          <p>I am a very simple card. I am good at containing small bits of information.
-                          I am convenient because I require little markup to use effectively.</p>
+                          <span class="card-title">Welcome to POSTer</span> <br>
+                          <p>
+                              An easy to use docker image app for API testing.
+                              Fast and responsive. Made with material design
+                          </p>
+                          <br> <br> 
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+    </div><!-- card -->
+    <div class="mycard center-align">
+            <div class="row">
+                    <div class="col s12 m12">
+                      <div class="card blue-grey darken-1">
+                        <div class="card-content white-text">
+                          <span class="card-title">How to use</span> <br>
+                          <p>
+                              Easy to use API tester. Just select the method, enter the url, set 
+                              headers and body, then click send.
+                          </p>
                         </div>
                         <div class="card-action">
+                        <a href="#" class="closecard">close</a>
                           <a href="#" class="closecard">okay</a>
-                          <a href="#" class="closecard">close</a>
                         </div>
                       </div>
                     </div>
                   </div>
     </div>
                 
+
+    <!-- main input body -->
+    <div id="input_body" >
+            <div class="method">
+                    <div class="input-field col s12">
+                            <select style="color:grey">
+                              <option value="" disabled selected>Choose your option</option>
+                              <option value="1">GET</option>
+                              <option value="2">POST</option>
+                              <option value="3">DELETE</option>
+                            </select>
+                            <label>Method</label>
+                          </div>            
+               </div>
+            
+               <div class="row">
+                    <div class="input-field col s6">
+                      <input style="color:grey" value="Alvin" id="first_name2" type="text" class="ip validate">
+                      <label class="active" for="first_name2">URL</label>
+                    </div>
+                  </div>
+            
+            
+                  <div class="row">
+                        <form class="col s12">
+                          <div class="row">
+                            <div class="input-field col s12">
+                              <textarea id="textarea1" style="color:grey" class="ip materialize-textarea"></textarea>
+                              <label for="textarea1">Body</label>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+            
+            
+                      <div class="row">
+                            <form class="col s12">
+                              <div class="row">
+                                <div class="input-field col s12">
+                                  <textarea style="color:grey" id="textarea1" class="ip materialize-textarea"></textarea>
+                                  <label for="textarea1">Response</label>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+
+                          
+            <center> <a class="waves-effect waves-light btn-small">Send</a></center>
+            
+    </div>
+        
+      
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
      <!-- Compiled and minified CSS -->
