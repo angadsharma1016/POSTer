@@ -11,4 +11,16 @@ $(document).ready(()=>{
         $("#input_body").show();
         $(".ip").val('');
     });
+
+    $(".submit").on("click",(e)=>{
+        e.preventDefault();
+        let method = $("select option:selected").text();
+        let url = $("#url").val();
+        let body = $("#data").val();
+        
+        $.post("http://localhost:3000/",{method,url,body},(response)=>{
+            $("#response").val("\n\n" + JSON.stringify(response,undefined,4));
+            M.textareaAutoResize($('#response'));
+        });
+    });
 });

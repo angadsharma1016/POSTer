@@ -17,6 +17,10 @@ app.get("/",(req,res)=>{
     res.render("main");
 }); 
 
+app.post("/",(req,res)=>{
+    res.json(req.body);
+});
+
 
 
 
