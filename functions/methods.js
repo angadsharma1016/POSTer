@@ -22,8 +22,8 @@ module.exports.POST = (url,headers,data)=>{
         request.post({
             url,
             headers,
-            form:data
-        },data,(err,response,body)=>{
+            form:JSON.parse(data)
+        },(err,response,body)=>{
             if(err)
                 reject(err)
             else

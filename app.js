@@ -35,13 +35,18 @@ app.get("/",(req,res)=>{
  * }
  */
 app.post("/",(req,res)=>{
+    let headers = JSON.parse(req.body.headers);
+    console.log(req.body)
+
+    if(headers['']!=undefined)
+        headers = null;
 
     if(req.body.method == "GET"){
-        GET(req.body.url,JSON.parse(req.body.headers))
+        GET(req.body.url,headers)
         .then(d=>res.send(d))
         .catch(console.log);
     } else if(req.body.method == "POST"){
-        POST(req.body.url,JSON.parse(req.body.headers),req.body.data)
+        POST(req.body.url,headers,req.body.body)
         .then(d=>res.send(d))
         .catch(console.log);
     }
@@ -51,6 +56,8 @@ app.post("/",(req,res)=>{
 });
 
 
-
+app.post("/test",(req,res,next)=>{
+    res.send(req.body)
+});
 
 app.listen(process.env.PORT || 3000,()=>console.log("Listening..."));

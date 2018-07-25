@@ -27,8 +27,7 @@ $(document).ready(()=>{
 
         for(let i=0;i<keys.length;i++)
             headers[keys.eq(i).val()] = values.eq(i).val();
-        
-        
+
         $.post("http://localhost:3000/",{method,url,body,headers:JSON.stringify(headers)},(response)=>{
             $("#response").val("\n\n" + response);
             M.textareaAutoResize($('#response'));
