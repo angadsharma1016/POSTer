@@ -6,3 +6,8 @@
 .method{
     width:10%;
 }
+
+.submit{
+    float:center;
+    margin-top: 30px;
+}

@@ -9,6 +9,11 @@ app.use(require("morgan")("dev"));
 app.set("view engine","ejs");
 app.use(express.static("static"));
 
+const {
+    GET,
+    POST
+} = require("./functions/methods");
+
 
 /**
  * @description main landing page
@@ -18,7 +23,15 @@ app.get("/",(req,res)=>{
 }); 
 
 app.post("/",(req,res)=>{
-    res.json(req.body);
+
+    if(req.body.method == "GET"){
+        GET(req.body.url,"headers")
+        .then(d=>res.send(d))
+        .catch(console.log);
+    }
+
+    else 
+        res.json(req.body);
 });
 
 

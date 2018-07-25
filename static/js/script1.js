@@ -21,7 +21,7 @@ $(document).ready(()=>{
         let body = $("#data").val();
         
         $.post("http://localhost:3000/",{method,url,body},(response)=>{
-            $("#response").val("\n\n" + JSON.stringify(response,undefined,4));
+            $("#response").val("\n\n" + response);
             M.textareaAutoResize($('#response'));
         });
     });
