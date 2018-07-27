@@ -55,7 +55,7 @@ app.post("/",(req,res)=>{
 
 
 app.post("/test",(req,res,next)=>{
-    res.send(req.body)
+    res.send(req.body);
 });
 
 app.listen(process.env.PORT || 3000,()=>console.log("Listening..."));
