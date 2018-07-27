@@ -1,4 +1,14 @@
+
 $(document).ready(()=>{
+    window.setTimeout(()=>{
+        $(".loading").hide();
+        $("#main_body").show();
+    },500)
+
+    $(".header_button").on("click",(e)=>{
+        e.preventDefault();
+        $(".header_row").append('<div class="input-field col s6"><input style="color:grey;" placeholder="Key" id="key" type="text" class="keys ip validate"><label for="key">Headers</label></div><div class="input-field col s6"><input  style="color:grey;" placeholder="Value" id="value" type="text" class="values ip validate"><label for="value"></label></div></div>')});
+
     $("#input_body").hide();
     $('select').formSelect();
     // $('#textarea1').val('New Text');

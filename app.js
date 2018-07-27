@@ -36,19 +36,17 @@ app.get("/",(req,res)=>{
  */
 app.post("/",(req,res)=>{
     let headers = JSON.parse(req.body.headers);
-    console.log(req.body)
-
     if(headers['']!=undefined)
         headers = null;
 
     if(req.body.method == "GET"){
         GET(req.body.url,headers)
         .then(d=>res.send(d))
-        .catch(console.log);
+        .catch(e=>res.send(e));
     } else if(req.body.method == "POST"){
         POST(req.body.url,headers,req.body.body)
         .then(d=>res.send(d))
-        .catch(console.log);
+        .catch(e=>res.send(e));
     }
 
     else 
