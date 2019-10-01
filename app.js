@@ -26,7 +26,6 @@ app.get("/",(req,res)=>{
 
 /**
  * @description Main post data needed to send request
- * 
  * {
  *  url:String,
  *  method:String,
